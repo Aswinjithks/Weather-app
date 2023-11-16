@@ -14,13 +14,13 @@ function App() {
       <Provider store={store}>
         <Suspense fallback={<Loader />}>
           <Home />
+          <ToastContainer
+            closeOnClick
+            style={{ width: "auto", minWidth: "340px", maxWidth: "450px" }}
+            position={toast.POSITION.BOTTOM_RIGHT}
+            bodyStyle={{ color: "#756f86" }}
+          />
         </Suspense>
-        <ToastContainer
-          closeOnClick
-          style={{ width: "auto", minWidth: "340px", maxWidth: "450px" }}
-          position={toast.POSITION.BOTTOM_RIGHT}
-          bodyStyle={{ color: "#756f86" }}
-        />
       </Provider>
     </>
   );
